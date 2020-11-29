@@ -26,17 +26,17 @@
       <main class="main">
         <!-- Score -->
         <div class="container-score panel">
-          <h2 class="user-score-txt">User score</h2>
           <h2 class="comp-score-txt">Comp score</h2>
+          <h2 class="user-score-txt">User score</h2>
 
-          <div class="slider-slot" id="slider-slot-user">
-            <div class="container-slider">
-              <div class="slider" id="slider-user"></div>
-            </div>
-          </div>
           <div class="slider-slot" id="slider-slot-comp">
             <div class="container-slider">
               <div class="slider" id="slider-comp"></div>
+            </div>
+          </div>
+          <div class="slider-slot" id="slider-slot-user">
+            <div class="container-slider">
+              <div class="slider" id="slider-user"></div>
             </div>
           </div>
 
@@ -80,30 +80,18 @@
         </div>
 
         <!-- Dials -->
-        <div class="container-dial-user">
+        <div class="container-choice-comp">
           <div class="container-dial">
             <ul>
-              <li>R</li>
-              <li>P</li>
-              <li>S</li>
-            </ul>
-            <div class="dial-slot">
-              <div class="dial" id="dial-user">
-                <div class="dial-rotate">
-                  <div class="icon-rectangle"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h2>User choice</h2>
-        </div>
-
-        <div class="container-dial-comp">
-          <div class="container-dial">
-            <ul>
-              <li>R</li>
-              <li>P</li>
-              <li>S</li>
+              <li id="icon-rock">
+                <i class="far fa-hand-rock fa-flip-horizontal"></i>
+              </li>
+              <li id="icon-paper">
+                <i class="far fa-hand-paper"></i>
+              </li>
+              <li id="icon-scissors">
+                <i class="far fa-hand-scissors fa-flip-vertical"></i>
+              </li>
             </ul>
             <div class="dial-slot">
               <div class="dial" id="dial-comp">
@@ -113,7 +101,31 @@
               </div>
             </div>
           </div>
-          <h2>Comp choice</h2>
+          <h2>Comp</h2>
+        </div>
+
+        <div class="container-choice-user">
+          <div class="container-dial">
+            <ul>
+              <li id="icon-rock">
+                <i class="far fa-hand-rock fa-flip-horizontal"></i>
+              </li>
+              <li id="icon-paper">
+                <i class="far fa-hand-paper"></i>
+              </li>
+              <li id="icon-scissors">
+                <i class="far fa-hand-scissors fa-flip-vertical"></i>
+              </li>
+            </ul>
+            <div class="dial-slot">
+              <div class="dial" id="dial-user">
+                <div class="dial-rotate">
+                  <div class="icon-rectangle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>User</h2>
         </div>
 
         <!-- Input -->
@@ -163,7 +175,10 @@
                 </div>
               </div>
             </div>
-            <i class="fas fa-headphones"></i>
+            <!-- <i class="fas fa-headphones"></i> -->
+            <div id="icon-headphones">
+              <i class="fas fa-headphones-alt"></i>
+            </div>
           </div>
         </div>
         <div class="hr-line"></div>

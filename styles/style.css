@@ -119,8 +119,8 @@ h3 {
   grid-template-rows: repeat(3, 1fr);
   gap: 3rem;
   grid-template-areas:
-    "container-score container-user-choice"
-    "container-result container-comp-choice"
+    "container-score container-choice-comp"
+    "container-result container-choice-user"
     "container-input container-jack";
 }
 
@@ -132,12 +132,12 @@ h3 {
   grid-area: container-result;
 }
 
-.container-user-choice {
-  grid-area: container-user-choice;
+.container-choice-comp {
+  grid-area: container-choice-comp;
 }
 
-.container-comp-choice {
-  grid-area: container-comp-choice;
+.container-choice-user {
+  grid-area: container-choice-user;
 }
 
 .container-input {
@@ -159,25 +159,25 @@ h3 {
   column-gap: 1rem;
   align-items: center;
   grid-template-areas:
-    "user-score slider-slot-user"
+    "comp-score slider-slot-comp"
     ". numbers-txt"
-    "comp-score slider-slot-comp";
-}
-
-.user-score-txt {
-  grid-area: user-score;
+    "user-score slider-slot-user";
 }
 
 .comp-score-txt {
   grid-area: comp-score;
 }
 
-#slider-slot-user {
-  grid-area: slider-slot-user;
+.user-score-txt {
+  grid-area: user-score;
 }
 
 #slider-slot-comp {
   grid-area: slider-slot-comp;
+}
+
+#slider-slot-user {
+  grid-area: slider-slot-user;
 }
 
 .numbers-txt {
@@ -281,8 +281,8 @@ h3 {
 }
 
 /* Dials */
-.container-dial-user,
-.container-dial-comp {
+.container-choice-comp,
+.container-choice-user {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -302,24 +302,27 @@ h3 {
 
 .container-dial li {
   position: absolute;
+  display: flex;
+  font-size: 1rem;
+  -webkit-text-stroke: 0.4px;
 }
 
-.container-dial li:nth-child(1) {
+#icon-rock {
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(-90deg);
 }
 
-.container-dial li:nth-child(2) {
+#icon-paper {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.container-dial li:nth-child(3) {
+#icon-scissors {
   top: 50%;
   right: 0;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(180deg);
 }
 
 /* Input */
@@ -349,6 +352,11 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+#icon-headphones {
+  font-size: 1rem;
+  -webkit-text-stroke: 0.4px;
 }
 
 /* Utilities */
@@ -488,15 +496,11 @@ h3 {
 
 .jack-slot {
   display: flex;
-  margin-bottom: 2.75rem;
+  margin-bottom: 2.6rem;
   border: 2px solid #000;
   border-radius: 50%;
   background: #000;
   box-shadow: var(--bkg-shadow-down);
-}
-
-.container-jack .fas {
-  font-size: 0.9rem;
 }
 
 .rectangle-vertical {

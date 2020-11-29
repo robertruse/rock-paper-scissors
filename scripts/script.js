@@ -16,25 +16,42 @@ function getCompChoice() {
   return choices[randomNumber];
 }
 
+/* Generate winnig message */
+
+function generateMessage(winningChoice) {
+  let message = "";
+  switch (winningChoice) {
+    case "rock":
+      message = "Rock smashes scissors.";
+      break;
+    case "paper":
+      message = "Paper covers rock.";
+      break;
+    case "scissors":
+      message = "Scissors cuts papper.";
+  }
+  return message;
+}
+
 /* Game state */
-function win(userChoice, compChoice) {
+function win(userChoice) {
   round++;
   userScore++;
   roundElement.innerText = `Round:0${round} - You Win!`;
-  rezultElement.innerText = `${userChoice} beats ${compChoice}.`;
+  rezultElement.innerText = generateMessage(userChoice);
 }
 
-function lose(userChoice, compChoice) {
+function lose(compChoice) {
   round++;
   compScore++;
   roundElement.innerText = `Round:0${round} - You Lose!`;
-  rezultElement.innerText = `${compChoice} beats ${userChoice}.`;
+  rezultElement.innerText = generateMessage(compChoice);
 }
 
 function draw(userChoice, compChoice) {
   round++;
-  roundElement.innerText = `Round:0${round}`;
-  rezultElement.innerText = "Draw.";
+  roundElement.innerText = `Round:0${round} - Draw.`;
+  rezultElement.innerText = `${userChoice} ties ${compChoice}.`;
 }
 
 /* Rotate Dial */
@@ -109,6 +126,14 @@ function gameOver() {
   }
 }
 
+function gameOver() {
+  if (userScore > compScore) {
+    roundElement.innerText = "Game over - You win!";
+  } else {
+    roundElement.innerText = "Game over - You lose!";
+  }
+}
+
 /* Game round */
 function game(e) {
   if (userScore < 3 && compScore < 3) {
@@ -119,12 +144,12 @@ function game(e) {
       case "rock-scissors":
       case "paper-rock":
       case "scissors-paper":
-        win(userChoice, compChoice);
+        win(userChoice);
         break;
       case "rock-paper":
       case "paper-scissors":
       case "scissors-rock":
-        lose(userChoice, compChoice);
+        lose(compChoice);
         break;
       default:
         draw(userChoice, compChoice);
