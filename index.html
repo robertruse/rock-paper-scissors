@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2925de2dd6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="aside" id="aside-left"></aside>
+      <main class="main">
+        <!-- Score -->
+        <div class="container-score panel">
+          <h2 class="user-score-txt">User score</h2>
+          <h2 class="comp-score-txt">Comp score</h2>
+
+          <div class="slider-slot" id="slider-slot-user">
+            <div class="container-slider">
+              <div class="slider" id="slider-user"></div>
+            </div>
+          </div>
+          <div class="slider-slot" id="slider-slot-comp">
+            <div class="container-slider">
+              <div class="slider" id="slider-comp"></div>
+            </div>
+          </div>
+
+          <ul class="numbers-txt">
+            <li>-</li>
+            <li>-</li>
+            <li>0</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+            <li>1</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+            <li>2</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+            <li>3</li>
+            <li>-</li>
+            <li>-</li>
+          </ul>
+        </div>
+
+        <!-- Result -->
+        <div class="container-result panel">
+          <div class="lcd">
+            <ul class="lcd-txt">
+              <li><i class="fas fa-battery-half"></i></li>
+              <li>
+                <p id="round">Rock, Paper, Scissors...</p>
+              </li>
+              <li>
+                <p id="rezult">Shoot!</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Dials -->
+        <div class="container-dial-user">
+          <div class="container-dial">
+            <ul>
+              <li>R</li>
+              <li>P</li>
+              <li>S</li>
+            </ul>
+            <div class="dial-slot">
+              <div class="dial" id="dial-user">
+                <div class="dial-rotate">
+                  <div class="icon-rectangle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>User choice</h2>
+        </div>
+
+        <div class="container-dial-comp">
+          <div class="container-dial">
+            <ul>
+              <li>R</li>
+              <li>P</li>
+              <li>S</li>
+            </ul>
+            <div class="dial-slot">
+              <div class="dial" id="dial-comp">
+                <div class="dial-rotate">
+                  <div class="icon-rectangle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>Comp choice</h2>
+        </div>
+
+        <!-- Input -->
+        <div class="container-input">
+          <div class="container-btn">
+            <div class="btn-slot">
+              <div class="btn" id="reset">
+                <div class="btn-inner">
+                  <div class="icon-circle"></div>
+                </div>
+              </div>
+            </div>
+            <h2>Reset</h2>
+          </div>
+
+          <div class="container-btn">
+            <div class="btn-slot">
+              <div class="btn choice" id="rock">
+                <div class="btn-inner"></div>
+              </div>
+              <div class="btn choice" id="paper">
+                <div class="btn-inner"></div>
+              </div>
+              <div class="btn choice" id="scissors">
+                <div class="btn-inner"></div>
+              </div>
+            </div>
+            <ul>
+              <li>Rock</li>
+              <li>Paper</li>
+              <li>Scissors</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Jack -->
+        <div class="container-jack">
+          <div class="container-btn">
+            <div class="jack-slot">
+              <div class="jack">
+                <div class="jack-inner">
+                  <div class="rectangle-vertical"></div>
+                  <div class="rectangle-horizontal"></div>
+                  <div class="rectangle-45deg"></div>
+                  <div class="rectangle-horizontal"></div>
+                  <div class="rectangle-vertical"></div>
+                </div>
+              </div>
+            </div>
+            <i class="fas fa-headphones"></i>
+          </div>
+        </div>
+        <div class="hr-line"></div>
+      </main>
+      <aside class="aside" id="aside-right"></aside>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
