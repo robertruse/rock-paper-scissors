@@ -561,12 +561,12 @@ h3 {
 
   .container-choice-comp {
     justify-self: start;
-    margin-left: 1.9rem;
+    margin-left: 1.5rem;
   }
 
   .container-choice-user {
     justify-self: end;
-    margin-right: 1.9rem;
+    margin-right: 1.5rem;
   }
 
   #icon-rock {
@@ -631,6 +631,10 @@ h3 {
     padding: 0.5rem 1rem;
   }
 
+  #icon-battery {
+    font-size: 0.9rem;
+  }
+
   .container-dial li {
     font-size: 0.9rem;
     -webkit-text-stroke: 0.4px;
@@ -641,8 +645,12 @@ h3 {
     margin-top: 0.75rem;
   }
 
-  #icon-battery {
-    font-size: 0.8rem;
+  .container-choice-comp {
+    margin-left: 1.3rem;
+  }
+
+  .container-choice-user {
+    margin-right: 1.3rem;
   }
 
   #icon-rock {
