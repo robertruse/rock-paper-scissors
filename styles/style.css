@@ -4,9 +4,15 @@
 
   /* Background */
   --bkg-color-grill: #d8d5ce;
+  --bkg-color-grill: #8fbfdc;
+  --bkg-color-grill: #b4cee9;
+  --bkg-color-grill: #b7d9f6;
+  --bkg-color-grill: #d2e6ee;
+  --bkg-color-grill: #bad1dc;
+
   --bkg-color-cover: #414141;
-  --bkg-color: #a2a1a1;
-  /* --bkg-color: #a7a8ac; */
+  --bkg-color: #a7a8ac;
+
   --bkg-shadow-down: 0 -2px 1px rgba(0, 0, 0, 0.4),
     0 2px 1px rgba(255, 255, 255, 0.2);
 
