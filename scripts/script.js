@@ -9,6 +9,12 @@ const dialUserElement = document.querySelector("#dial-user > div");
 const dialCompElement = document.querySelector("#dial-comp > div");
 const choicesElement = document.querySelectorAll(".choice");
 const resetElement = document.querySelector("#reset");
+const dialIconsUserElement = document.querySelectorAll(
+  ".container-icons-user .dial-icon"
+);
+const dialIconsCompElement = document.querySelectorAll(
+  ".container-icons-comp .dial-icon"
+);
 
 function getCompChoice() {
   const choices = ["rock", "paper", "scissors"];
@@ -75,6 +81,37 @@ function removeRotateDialComp() {
   dialCompElement.classList.remove("dial-rotate-rock");
   dialCompElement.classList.remove("dial-rotate-paper");
   dialCompElement.classList.remove("dial-rotate-scissors");
+}
+
+/* Add dial icon color */
+function addDialIconColorUser(userChoice) {
+  removeIconColorUser();
+  dialIconsUserElement.forEach((item) => {
+    if (item.id === `icon-${userChoice}`) {
+      item.classList.add("icon-color");
+    }
+  });
+}
+
+function removeIconColorUser() {
+  dialIconsUserElement.forEach((item) => {
+    item.classList.remove("icon-color");
+  });
+}
+
+function addDialIconColorComp(compChoice) {
+  removeIconColorComp();
+  dialIconsCompElement.forEach((item) => {
+    if (item.id === `icon-${compChoice}`) {
+      item.classList.add("icon-color");
+    }
+  });
+}
+
+function removeIconColorComp() {
+  dialIconsCompElement.forEach((item) => {
+    item.classList.remove("icon-color");
+  });
 }
 
 /* Move Slider */
@@ -155,6 +192,8 @@ function game(e) {
         draw(userChoice, compChoice);
     }
 
+    addDialIconColorUser(userChoice);
+    addDialIconColorComp(compChoice);
     addRotateDialUser(userChoice);
     addRotateDialComp(compChoice);
     addMoveSliderUser();
@@ -171,6 +210,8 @@ function reset() {
   round = 0;
   userScore = 0;
   compScore = 0;
+  removeIconColorUser();
+  removeIconColorComp();
   removeRotateDialUser();
   removeRotateDialComp();
   removeMoveSliderUser();

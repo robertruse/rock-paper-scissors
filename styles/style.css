@@ -1,20 +1,20 @@
 :root {
   --font-color: #5c5c5c;
-  --color-red: #c04836;
+  --accent-color: #c04836;
 
   /* Background */
-  --bkg-color-grill: #d8d5ce;
-  --bkg-color-grill: #8fbfdc;
-  --bkg-color-grill: #b4cee9;
-  --bkg-color-grill: #b7d9f6;
-  --bkg-color-grill: #d2e6ee;
-  --bkg-color-grill: #bad1dc;
-
-  --bkg-color-cover: #414141;
-  --bkg-color: #a7a8ac;
-
+  --bkg-color-primary: #a7a8ac;
   --bkg-shadow-down: 0 -2px 1px rgba(0, 0, 0, 0.4),
     0 2px 1px rgba(255, 255, 255, 0.2);
+  --bkg-shadow-up: inset 0 -5px 1px rgba(0, 0, 0, 0.4),
+    inset 0 2px 1px rgba(255, 255, 255, 0.2);
+
+  --bkg-color-secondary: #d8d5ce;
+  /* --bkg-color-secondary: #8fbfdc;
+  --bkg-color-secondary: #b4cee9;
+  --bkg-color-secondary: #b7d9f6;
+  --bkg-color-secondary: #d2e6ee;
+  --bkg-color-secondary: #bad1dc; */
 
   /* Panel */
   --panel-color: #e0e5e3;
@@ -22,7 +22,6 @@
   --panel-shadow-inner: inset 0 10px 5px rgba(0, 0, 0, 0.2);
 
   /* Dial */
-  --dial-color: #404241;
   --dial-color: #363636;
   --dial-shadow-up: inset 0 2px 1px rgba(255, 255, 255, 0.1),
     inset 0 -3px 1px rgba(0, 0, 0, 0.4);
@@ -65,7 +64,7 @@ html {
   font-family: "Montserrat", sans-serif;
   color: var(--font-color);
   overflow-y: auto;
-  background: var(--bkg-color-grill);
+  background: var(--bkg-color-secondary);
 }
 
 li {
@@ -101,7 +100,8 @@ h3 {
   position: relative;
   margin: 0 auto;
   padding: 3rem 3rem 3rem 6rem;
-  background: var(--bkg-color);
+  background: var(--bkg-color-primary);
+  box-shadow: var(--bkg-shadow-up);
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -194,7 +194,7 @@ h3 {
   left: 0;
   height: 0.8rem;
   width: 0.4rem;
-  background: var(--color-red);
+  background: var(--accent-color);
   background: var(--slider-color);
   transform: translateX(-50%);
   transition: left 500ms ease-in-out;
@@ -228,7 +228,7 @@ h3 {
   align-items: center;
   text-align: center;
   font-size: 1rem;
-  color: var(--color-red);
+  color: var(--accent-color);
   opacity: 0.75;
 }
 
@@ -241,7 +241,7 @@ h3 {
 .lcd {
   width: 100%;
   display: flex;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   background: var(--lcd-color);
   box-shadow: var(--lcd-shadow-down), var(--panel-shadow-inner);
@@ -263,6 +263,7 @@ h3 {
   text-transform: uppercase;
   color: var(--lcd-font-color);
   text-shadow: var(--lcd-text-shadow);
+  overflow: hidden;
 }
 
 #icon-battery {
@@ -288,6 +289,7 @@ h3 {
   position: relative;
   display: flex;
   align-items: center;
+  padding: 32px 32px 0 32px;
 }
 
 .container-dial ul {
@@ -302,21 +304,26 @@ h3 {
 }
 
 #icon-rock {
-  top: 50%;
-  left: -32px;
+  top: 61%;
+  left: 0;
   transform: translateY(-50%) rotate(-90deg);
 }
 
 #icon-paper {
-  top: -32px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
 #icon-scissors {
-  top: 50%;
-  right: -32px;
+  top: 61%;
+  right: 0;
   transform: translateY(-50%) rotate(180deg);
+}
+
+.icon-color {
+  color: var(--accent-color);
+  opacity: 0.9;
 }
 
 /* Input */
@@ -365,9 +372,8 @@ h3 {
   height: 3px;
   position: absolute;
   top: 69%;
-  background: #444;
+  background: #5a5a5a;
   box-shadow: var(--bkg-shadow-down);
-  box-shadow: 0 2px 1px rgba(255, 255, 255, 0.2), 0 -2px 1px rgba(0, 0, 0, 0.4);
 }
 
 .btn {
@@ -446,7 +452,6 @@ h3 {
 
 .dial-slot {
   display: flex;
-
   border: 1px solid #111;
   border-radius: 50%;
   background: #111;
@@ -457,7 +462,7 @@ h3 {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--color-red);
+  background: var(--accent-color);
 }
 
 .icon-rectangle {
@@ -567,24 +572,14 @@ h3 {
 
   .container-choice-comp {
     justify-self: start;
-    margin-left: 1.5rem;
   }
 
   .container-choice-user {
     justify-self: end;
-    margin-right: 1.5rem;
   }
 
-  #icon-rock {
-    left: -24px;
-  }
-
-  #icon-paper {
-    top: -24px;
-  }
-
-  #icon-scissors {
-    right: -24px;
+  .container-dial {
+    padding: 24px 24px 0 24px;
   }
 
   .container-btn li {
@@ -597,7 +592,7 @@ h3 {
   }
 
   .btn-slot {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
   }
 
   .dial {
@@ -651,37 +646,12 @@ h3 {
     margin-top: 0.75rem;
   }
 
-  .container-choice-comp {
-    margin-left: 1.3rem;
-  }
-
-  .container-choice-user {
-    margin-right: 1.3rem;
-  }
-
-  #icon-rock {
-    left: -20px;
-  }
-
-  #icon-paper {
-    top: -20px;
-  }
-
-  #icon-scissors {
-    right: -20px;
-  }
-
   .hr-line {
     top: 78%;
   }
 
   .btn-slot {
     margin-bottom: 0.75rem;
-  }
-
-  .dial {
-    width: 65px;
-    height: 65px;
   }
 }
 
@@ -692,5 +662,16 @@ h3 {
 
   .lcd-txt li {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .hr-line {
+    top: 76%;
+  }
+
+  .dial {
+    width: 65px;
+    height: 65px;
   }
 }
