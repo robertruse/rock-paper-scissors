@@ -8,13 +8,9 @@
     0 2px 1px rgba(255, 255, 255, 0.2);
   --bkg-shadow-up: inset 0 -5px 1px rgba(0, 0, 0, 0.4),
     inset 0 2px 1px rgba(255, 255, 255, 0.2);
-
+  --bkg-shadow-up: inset 0 -5px 1px rgba(0, 0, 0, 0.4),
+    inset 0 2px 1px rgba(255, 255, 255, 0.2);
   --bkg-color-secondary: #d8d5ce;
-  /* --bkg-color-secondary: #8fbfdc;
-  --bkg-color-secondary: #b4cee9;
-  --bkg-color-secondary: #b7d9f6;
-  --bkg-color-secondary: #d2e6ee;
-  --bkg-color-secondary: #bad1dc; */
 
   /* Panel */
   --panel-color: #e0e5e3;
@@ -468,8 +464,7 @@ h3 {
 .icon-rectangle {
   width: 5px;
   height: 28px;
-
-  background: var(--btn-color);
+  background: var(--panel-color);
 }
 
 .jack {
