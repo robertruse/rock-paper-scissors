@@ -11,12 +11,18 @@
   --bkg-color-secondary: #d8d5ce;
 
   /* Panel */
-  --panel-color: #e0e5e3;
+  --panel-color: linear-gradient(
+    165deg,
+    #f1fcf7 0%,
+    #e7eeeb 49%,
+    #e0e5e3 50%,
+    #d2dbd7 100%
+  );
   --panel-shadow-down: inset 0 4px 1px rgba(0, 0, 0, 0.4);
   --panel-shadow-inner: inset 0 10px 5px rgba(0, 0, 0, 0.2);
 
   /* Dial */
-  --dial-color: #363636;
+  --dial-color: #5c5d5f;
   --dial-shadow-up: inset 0 2px 1px rgba(255, 255, 255, 0.1),
     inset 0 -3px 1px rgba(0, 0, 0, 0.4);
   --dial-shadow-outter: 0 5px 6px rgba(0, 0, 0, 0.4),
@@ -38,7 +44,13 @@
     inset 0 5px 5px rgba(0, 0, 0, 0.2);
 
   /* LCD */
-  --lcd-color: #b3b7a6;
+  --lcd-color: linear-gradient(
+    165deg,
+    #cbcfbd 0%,
+    #bbbeae 49%,
+    #b3b7a6 50%,
+    #a8ac9c 100%
+  );
   --lcd-shadow-down: inset 0 4px 1px rgba(0, 0, 0, 0.2);
   --lcd-font-color: rgba(0, 0, 0, 0.4);
   --lcd-text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
@@ -462,7 +474,6 @@ h3 {
 .icon-rectangle {
   width: 5px;
   height: 28px;
-
   background: var(--btn-color);
 }
 
