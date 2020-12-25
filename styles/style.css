@@ -16,7 +16,7 @@
     #f1fcf7 0%,
     #e7eeeb 49%,
     #e0e5e3 50%,
-    #d2dbd7 100%
+    #d4e0db 100%
   );
   --panel-shadow-down: inset 0 4px 1px rgba(0, 0, 0, 0.4);
   --panel-shadow-inner: inset 0 10px 5px rgba(0, 0, 0, 0.2);
@@ -71,6 +71,8 @@ html {
   color: var(--font-color);
   overflow-y: auto;
   background: var(--bkg-color-secondary);
+  background-image: url("../images/bkg-tile.png");
+  background-size: 60%;
 }
 
 li {
@@ -107,7 +109,7 @@ h3 {
   margin: 0 auto;
   padding: 3rem 3rem 3rem 6rem;
   background: var(--bkg-color-primary);
-  box-shadow: var(--bkg-shadow-up);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.253);
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -539,6 +541,7 @@ h3 {
 /* Media queries */
 @media (max-width: 768px) {
   .container {
+    max-width: 100%;
     padding: 2rem 15%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -646,17 +649,8 @@ h3 {
     -webkit-text-stroke: 0.4px;
   }
 
-  .container-choice-comp h2,
-  .container-choice-user h2 {
-    margin-top: 0.75rem;
-  }
-
   .hr-line {
-    top: 78%;
-  }
-
-  .btn-slot {
-    margin-bottom: 0.75rem;
+    top: 76.8%;
   }
 }
 
@@ -670,13 +664,244 @@ h3 {
   }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 640px) {
   .hr-line {
-    top: 76%;
+    top: 76.8%;
+  }
+
+  .container-choice-comp h2,
+  .container-choice-user h2 {
+    margin-top: 0.76rem;
+  }
+
+  .btn-slot {
+    margin-bottom: 0.75rem;
   }
 
   .dial {
     width: 65px;
     height: 65px;
+  }
+}
+
+@media (max-height: 568px) {
+  .hr-line {
+    display: none;
+  }
+}
+
+@media (min-height: 900px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .container {
+    max-width: 1100px;
+    padding: 4rem 4rem 4rem 8rem;
+    gap: 4rem;
+  }
+
+  .container-score {
+    padding: 2.5rem;
+  }
+
+  .slider-slot {
+    height: 1.2rem;
+  }
+
+  .slider {
+    height: 1.1rem;
+    width: 0.55rem;
+  }
+
+  .container-score li {
+    font-size: 1.2rem;
+  }
+
+  .container-result {
+    padding: 2.5rem;
+  }
+
+  .lcd {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .lcd-txt li {
+    font-size: 2.5rem;
+  }
+
+  #icon-battery {
+    font-size: 1.4rem;
+  }
+
+  .container-choice-comp h2,
+  .container-choice-user h2 {
+    margin-top: 2.5rem;
+  }
+
+  .container-dial {
+    padding: 40px 40px 0 40px;
+  }
+
+  .container-dial li {
+    font-size: 1.2rem;
+  }
+
+  .container-btn li {
+    width: 90px;
+    font-size: 1.2rem;
+  }
+
+  #icon-headphones {
+    font-size: 1.2rem;
+  }
+
+  .hr-line {
+    height: 4px;
+  }
+
+  .btn {
+    width: 90px;
+    height: 90px;
+  }
+
+  .btn-slot {
+    margin-bottom: 2.5rem;
+  }
+
+  .dial {
+    width: 105px;
+    height: 105px;
+  }
+
+  .icon-circle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon-rectangle {
+    width: 6px;
+    height: 34px;
+  }
+
+  .jack {
+    width: 60px;
+    height: 60px;
+  }
+
+  .jack-slot {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-height: 1100px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .container {
+    max-width: 1300px;
+    padding: 4.5rem 4.5rem 4.5rem 9rem;
+    gap: 4rem;
+  }
+
+  .container-score {
+    padding: 2.7rem;
+  }
+
+  .slider-slot {
+    height: 1.5rem;
+  }
+
+  .slider {
+    height: 1.4rem;
+    width: 0.7rem;
+  }
+
+  .container-score li {
+    font-size: 1.5rem;
+  }
+
+  .container-result {
+    padding: 2.7rem;
+  }
+
+  .lcd {
+    padding: 0.9rem 1.4rem;
+  }
+
+  .lcd-txt li {
+    font-size: 3rem;
+  }
+
+  #icon-battery {
+    font-size: 1.6rem;
+  }
+
+  .container-choice-comp h2,
+  .container-choice-user h2 {
+    margin-top: 2.6rem;
+  }
+
+  .container-dial {
+    padding: 50px 50px 0 50px;
+  }
+
+  .container-dial li {
+    font-size: 1.5rem;
+  }
+
+  .container-btn li {
+    width: 110px;
+    font-size: 1.5rem;
+  }
+
+  #icon-headphones {
+    font-size: 1.5rem;
+  }
+
+  .hr-line {
+    height: 5px;
+  }
+
+  .btn {
+    width: 110px;
+    height: 110px;
+  }
+
+  .btn-slot {
+    margin-bottom: 2.6rem;
+  }
+
+  .dial {
+    width: 125px;
+    height: 125px;
+  }
+
+  .icon-circle {
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon-rectangle {
+    width: 8px;
+    height: 40px;
+  }
+
+  .jack {
+    width: 70px;
+    height: 70px;
+  }
+
+  .jack-slot {
+    margin-bottom: 3.2rem;
   }
 }
