@@ -4,11 +4,18 @@
 
   /* Background */
   --bkg-color-primary: #a7a8ac;
+  --bkg-color-primary: #a7a8ac;
+  /* --bkg-color-primary: #ddd3cc;
+  --bkg-color-primary: #dad9d0; */
+
   --bkg-shadow-down: 0 -2px 1px rgba(0, 0, 0, 0.4),
     0 2px 1px rgba(255, 255, 255, 0.2);
   --bkg-shadow-up: inset 0 -5px 1px rgba(0, 0, 0, 0.4),
     inset 0 2px 1px rgba(255, 255, 255, 0.2);
+
   --bkg-color-secondary: #d8d5ce;
+  --bkg-color-secondary: #deddd7;
+  /* --bkg-color-secondary: #e3e4e0; */
 
   /* Panel */
   --panel-color: linear-gradient(
@@ -44,13 +51,21 @@
     inset 0 5px 5px rgba(0, 0, 0, 0.2);
 
   /* LCD */
-  --lcd-color: linear-gradient(
+  /* --lcd-color: linear-gradient(
     165deg,
     #cbcfbd 0%,
     #bbbeae 49%,
     #b3b7a6 50%,
     #a8ac9c 100%
+  ); */
+  --lcd-color: linear-gradient(
+    165deg,
+    #cbcfbd 0%,
+    #bbbeae 49%,
+    #b3b7a6 50%,
+    #b0b4a4 100%
   );
+
   --lcd-shadow-down: inset 0 4px 1px rgba(0, 0, 0, 0.2);
   --lcd-font-color: rgba(0, 0, 0, 0.4);
   --lcd-text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
@@ -71,7 +86,7 @@ html {
   color: var(--font-color);
   overflow-y: auto;
   background: var(--bkg-color-secondary);
-  background-image: url("../images/bkg-tile.png");
+  /* background-image: url("../images/bkg-tile.png"); */
   background-size: 60%;
 }
 
@@ -109,7 +124,8 @@ h3 {
   margin: 0 auto;
   padding: 3rem 3rem 3rem 6rem;
   background: var(--bkg-color-primary);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.253);
+  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); */
+
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(3, 1fr);
